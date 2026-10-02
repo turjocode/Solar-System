@@ -30,20 +30,6 @@ body {
     animation: rotation 30s linear infinite;
 }
 
-.orbit-star {
-    position: absolute;
-
-    width: 2px;
-    height: 2px;
-
-    background: white;
-    border-radius: 50%;
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
-
-    top: 50%;
-    left: 80%;
-}
-
 .solar-system {
     position: relative;
     min-height: 100vh;
