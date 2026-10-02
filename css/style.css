@@ -10,7 +10,7 @@ body {
     background-image: radial-gradient(ellipse farthest-side at top right, rgba(255, 165, 0, 0.55), #00022E);
     background-repeat: no-repeat; 
     min-height: 100vh;
-    min-width: 98vw;
+    min-width: 100%;
     color: #ffffff;
     font-family: 'Orbitron', sans-serif;
 }
@@ -49,6 +49,19 @@ body {
     right: 0;
 }
 
+.mercury-orbit {
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    top: -125px;
+    right: -125px;
+    border-radius: 50%;
+
+    animation: rotation 7s linear infinite;
+}
+
 .mercury {
     width: 30px;
     height: 30px;
@@ -57,8 +70,22 @@ body {
     box-shadow: 0 0 8px rgba(180, 150, 120, 0.5);
 
     position: absolute;
-    top: 15%;
-    right: 15%;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+}
+
+.venus-orbit {
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    top: -250px;
+    right: -250px;
+    border-radius: 50%;
+
+    animation: rotation 11s linear infinite;
 }
 
 .venus {
@@ -69,11 +96,24 @@ body {
     box-shadow: 0 0 15px rgba(244, 180, 80, 0.6);
 
     position: absolute;
-    top: 20%;
-    right: 20%;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+
 }
 
+.earth-orbit {
+    position: absolute;
 
+    width: 900px;
+    height: 900px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    top: -375px;
+    right: -375px;
+    border-radius: 50%;
+
+    animation: rotation 15s linear infinite;
+}
 
 .earth {
     width: 46px;
@@ -82,11 +122,12 @@ body {
     box-shadow: 0 0 20px rgba(80, 190, 255, 0.9);
 
     position: absolute;
-    top: 27%;
-    right: 27%;
+    top: 50%;
+    right: -23px;
+    transform: translateY(-50%);
 }
 
-.earth::before{
+.earth::before {
     content: "";
     position: absolute;
     top: 0;
@@ -99,7 +140,7 @@ body {
     animation: rotation 10s linear infinite;
 }
 
-.earth::after{
+.earth::after {
     content: "";
     position: absolute;
     top: 0;
@@ -120,7 +161,20 @@ body {
     }
 }
 
-.mars{
+.mars-orbit {
+    position: absolute;
+
+    width: 1150px;
+    height: 1150px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    top: -500px;
+    right: -500px;
+    border-radius: 50%;
+
+    animation: rotation 18s linear infinite;
+}
+
+.mars {
     width: 40px;
     height: 40px;
     background-image: radial-gradient(circle, #FF6F43, #C40000, #4A0000);
@@ -128,11 +182,26 @@ body {
     box-shadow: 0 0 15px rgba(255, 80, 50, 0.55);
 
     position: absolute;
-    top: 34%;
-    right: 34%;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+
 }
 
-.jupiter{
+.jupiter-orbit {
+    position: absolute;
+
+    width: 1500px;
+    height: 1500px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    top: -675px;
+    right: -675px;
+    border-radius: 50%;
+    animation: rotation 20s linear infinite;
+}
+
+.jupiter {
+    position: absolute;
     width: 80px;
     height: 80px;
     background-image:
@@ -142,18 +211,31 @@ body {
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(220, 180, 130, 0.35);
 
-    position: absolute;
-    top: 45%;
-    right: 45%;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
 }
 
+.saturn-orbit {
+    position: absolute;
+
+    width: 1800px;
+    height: 1800px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    top: -825px;
+    right: -825px;
+    border-radius: 50%;
+
+    animation: rotation 22s linear infinite;
+}
 
 .saturn-container {
     position: absolute;
     width: 70px;
     height: 70px;
-    top: 57%;
-    right: 57%;
+    top: 50%;
+    right: -35px;
+    transform: translateY(-50%);
 }
 
 .saturn{
@@ -194,6 +276,19 @@ body {
     clip-path: inset(37% 0 0 0);
 }
 
+.uranus-orbit {
+    position: absolute;
+
+    width: 2100px;
+    height: 2100px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    top: -975px;
+    right: -975px;
+    border-radius: 50%;
+
+    animation: rotation 25s linear infinite;
+}
+
 .uranus{
     width: 55px;
     height: 55px;
@@ -202,8 +297,22 @@ body {
     box-shadow: 0 0 15px #80deea;
 
     position: absolute;
-    top: 69%;
-    right: 69%;
+    top: 50%;
+    right: -27.5px;
+    transform: translateY(-50%);
+}
+
+.neptune-orbit {
+    position: absolute;
+
+    width: 2400px;
+    height: 2400px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    top: -1125px;
+    right: -1125px;
+    border-radius: 50%;
+
+    animation: rotation 27s linear infinite;
 }
 
 .neptune{
@@ -214,6 +323,7 @@ body {
     box-shadow: 0 0 15px #4169E1;
 
     position: absolute;
-    top: 80%;
-    right: 80%;
+    top: 50%;
+    right: -26px;
+    transform: translateY(-50%);
 }
